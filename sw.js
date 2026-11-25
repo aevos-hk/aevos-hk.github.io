@@ -1,6 +1,6 @@
 // Aevos service worker. Caches same-origin static files only; never caches API responses or health data.
-const V = '280332a3e407', SHELL = 'aevos-shell-' + V, ASSET = 'aevos-asset-v2';
-const FILES = ["./","manifest.webmanifest","icons/icon-192.png","assets/index-BM2ux7hY.js","assets/Assistant-DKbGFSdG.js","assets/Bio-DTxGR2a_.js","assets/Body-mjExXNIG.js","assets/Hub-DLCT_Lpi.js","assets/Jarvis-CD4SuJLl.js","assets/Reports-Dehp0FN_.js","assets/Settings-DmqzcmXJ.js","assets/data-C5d-hbaN.js","assets/gateway-Czqu8G8n.js","assets/kit-Cw1L_cKH.js","assets/scale-DYd7RSji.js","assets/store-BSC-Frjt.js","assets/index-C8NygFdM.css"];
+const V = '300f68c7e861', SHELL = 'aevos-shell-' + V, ASSET = 'aevos-asset-v2';
+const FILES = ["./","manifest.webmanifest","icons/icon-192.png","assets/index-B5-Uqsk1.js","assets/Assistant-D-QECaoJ.js","assets/Bio-DNg4Df0v.js","assets/Body-Bo6MMRjU.js","assets/BodyPanel-BDEl0kv2.js","assets/Connect-CPRG923c.js","assets/Hub-DnIE-sm0.js","assets/Jarvis-Cujcy1E1.js","assets/Reports-CZH6rHUu.js","assets/Settings-C_PHd4By.js","assets/data-C-BCTMsx.js","assets/gateway-DPCdm0Oi.js","assets/kit-CHCse5vH.js","assets/scale-DYd7RSji.js","assets/store-Dr5XsqEO.js","assets/viewer-CK-WOk3O.js","assets/index-BsMQtQGX.css"];
 const BASE = new URL('./', self.location).pathname;
 self.addEventListener('install', e => e.waitUntil(caches.open(SHELL).then(c => c.addAll(FILES.map(f => new Request(f, { cache: 'reload' }))))));
 self.addEventListener('message', e => { if (e.data === 'skip') self.skipWaiting(); });
