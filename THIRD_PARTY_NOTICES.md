@@ -2,6 +2,8 @@
 
 Anatomy: BodyParts3D © The Database Center for Life Science (CC BY 4.0); female organs: Human Reference Atlas 3D Reference Organs, HuBMAP (CC BY 4.0); female body and hair: MakeHuman (CC0). Modified by open-anatomy-3d 0.1.0 (https://github.com/MervinR07/open-anatomy-3d), CC BY 4.0. Aevos re-colours and re-lights the models at run time.
 
+Reference appearance: Microsoft Rocketbox, Copyright (c) 2020 Microsoft. The models and their source textures are `Male_Adult_02` and `Female_Adult_02` from [Microsoft Rocketbox at 0943055](https://github.com/microsoft/Microsoft-Rocketbox/tree/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets). The [MIT licence](public/models/people/LICENSE-Rocketbox.md) ships next to the converted GLBs. Aevos removes the FBX animation and lights, adjusts UVs, derives roughness from the source specular maps, flips the normal map green channel and encodes WebP textures at two quality levels. The viewer fits the static reference appearance to the existing anatomy and adjusts the upper-arm pose, lighting and hair material at runtime. Conversion is in [scripts/people](scripts/people/).
+
 | Component | Version | Licence |
 |---|---|---|
 | Mol* | 5.13.1 (two build-time edits, see scripts/vendor-molstar.mjs: dynamic code in the bundled MP4 encoder removed for CSP) | MIT, vendor/molstar/LICENSE |
